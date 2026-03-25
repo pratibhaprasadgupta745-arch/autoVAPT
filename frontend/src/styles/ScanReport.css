@@ -1,0 +1,233 @@
+/* ---------------- ANIMATION ---------------- */
+.scan-report .fade-in { animation: fadeIn 0.8s ease-in-out; }
+@keyframes fadeIn {
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ---------------- CARD EFFECT ---------------- */
+.scan-report .card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.scan-report .card-hover:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 20px rgba(0,0,0,0.12);
+}
+
+/* ---------------- TABLE ---------------- */
+.scan-report .table-hover tr:hover {
+  background-color:#f1f5f9;
+  transition:background-color 0.2s ease;
+}
+
+.scan-report .overflow-x-auto { overflow-x:auto; }
+
+/* ---------------- BUTTONS ---------------- */
+.scan-report .btn-primary{
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  transition:0.3s ease;
+}
+.scan-report .btn-primary:hover{
+  background: linear-gradient(135deg, #0891b2, #0284c7);
+  transform:translateY(-2px);
+}
+
+.scan-report .btn-secondary{
+  background:#f3f4f6;
+  color:#111;
+  padding:8px 14px;
+  border-radius:6px;
+  transition:0.3s ease;
+}
+.scan-report .btn-secondary:hover{
+  background:#e5e7eb;
+  transform:translateY(-2px);
+}
+
+/* 🔥 NEW: DOWNLOAD BUTTON STYLE */
+.scan-report .btn-download{
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  margin-left:8px;
+  transition:0.3s ease;
+}
+.scan-report .btn-download:hover{
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform:scale(1.05);
+}
+
+/* 🔥 NEW: AI BUTTON */
+.scan-report .btn-ai{
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  margin-left:8px;
+}
+.scan-report .btn-ai:hover{
+  background: linear-gradient(135deg, #9333ea, #6d28d9);
+}
+
+/* ---------------- GRID ---------------- */
+.scan-report .grid>div{
+  transition:0.2s ease;
+}
+.scan-report .grid>div:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* ---------------- CARD BASE ---------------- */
+.scan-report .p-4.bg-white.shadow.rounded{
+  padding:1rem;
+  background-color:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  border-radius:0.5rem;
+}
+
+/* ---------------- LOADING ---------------- */
+.scan-report .animate-pulse{
+  animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:0.4;}
+}
+
+/* ---------------- TEXT ---------------- */
+.scan-report .text-center p{
+  font-size:1rem;
+  margin-bottom:0.25rem;
+}
+.scan-report .text-center h2{
+  font-size:1.75rem;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width:768px){
+  .scan-report .grid-cols-1.sm\:grid-cols-2{
+    grid-template-columns:1fr!important;
+  }
+  .scan-report .grid-cols-1.lg\:grid-cols-3{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* ---------------- SCAN PROGRESS ---------------- */
+.scan-report .scan-stage-container{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  margin-bottom:0.5rem;
+}
+
+.scan-report .scan-stage{
+  padding:0.2rem 0.5rem;
+  border-radius:0.25rem;
+  font-size:0.875rem;
+  color:#d1d5db;
+  background-color:#374151;
+  transition:all 0.3s ease;
+}
+
+.scan-report .scan-stage.active{
+  background-color:#16a34a;
+  color:#fff;
+}
+
+.scan-report .progress-wrapper{
+  flex:1;
+  background-color:#1f2937;
+  border-radius:0.25rem;
+  height:0.75rem;
+  position:relative;
+  overflow:hidden;
+}
+
+.scan-report .progress-fill{
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  height:100%;
+  width:0%;
+  transition:width 0.5s ease;
+}
+
+/* ---------------- TERMINAL LOG ---------------- */
+.scan-report .bg-black{
+  background-color:#000;
+  position:relative;
+}
+.scan-report .h-64{height:16rem;}
+.scan-report .overflow-y-auto{overflow-y:auto;}
+.scan-report .text-green-400{color:#22c55e;}
+.scan-report .font-mono{font-family:monospace;}
+.scan-report .p-4{padding:1rem;}
+.scan-report .rounded{border-radius:0.5rem;}
+
+.scan-report .log-line{
+  font-family:monospace;
+  color:#22c55e;
+  white-space:pre-wrap;
+}
+
+/* 🔥 NEW: GLOW EFFECT FOR TERMINAL */
+.scan-report .log-line::after{
+  content:"";
+  display:block;
+  height:1px;
+  background:rgba(34,197,94,0.2);
+  margin-top:2px;
+}
+
+/* CURSOR */
+.scan-report .cursor-blink{
+  display:inline-block;
+  width:10px;
+  background-color:#22c55e;
+  margin-left:2px;
+  animation:blink 1s steps(1) infinite;
+}
+@keyframes blink{
+  0%,50%{opacity:1;}
+  51%,100%{opacity:0;}
+}
+
+/* ---------------- TABLE FIX ---------------- */
+.scan-report td.break-all{
+  word-break:break-all;
+}
+
+/* ---------------- MAIN ---------------- */
+.scan-report .main-content {
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
+}
+
+/* MATRIX EFFECT */
+.scan-report .bg-black::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(34,197,94,0.05) 0 1px,
+    transparent 1px 3px
+  );
+  z-index: -1;
+}
+
+/* 🔥 NEW: AI EXPLOIT CARD */
+.scan-report .ai-card{
+  border-left:4px solid #a855f7;
+  padding:10px;
+  margin-bottom:10px;
+  background:#faf5ff;
+  border-radius:6px;
+}

@@ -1,0 +1,136 @@
+/* Sidebar Container */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(270deg,#020024,#090979,#00d4ff,#020024);
+  background-size: 600% 600%;
+  animation: sidebarMove 12s ease infinite;
+  color: white;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Background Animation */
+@keyframes sidebarMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative; /* for collapse button */
+}
+
+/* Sidebar Title */
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 40px; /* space for collapse button */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Collapse Button */
+.sidebar-header .collapse-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar-header .collapse-btn:hover {
+  background: #00d4ff;
+  color: black;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  padding: 0 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Menu Item */
+.menu li {
+  margin-bottom: 10px;
+}
+
+/* Menu Links */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover & Active */
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu a.active {
+  background: #00d4ff;
+  color: black;
+  font-weight: bold;
+}
+
+/* Slide text animation with springy effect */
+.menu a span + * {
+  display: inline-block;
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease;
+}
+
+.sidebar.collapsed .menu a span + * {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+/* Logout Button */
+.logout-btn {
+  margin: 15px;
+  padding: 12px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: calc(100% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}

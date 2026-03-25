@@ -1,0 +1,211 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+overflow:hidden;
+}
+
+/* Background */
+
+.login-container{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(270deg,#020024,#090979,#00d4ff,#020024);
+
+background-size:600% 600%;
+
+animation:bgMove 12s ease infinite;
+
+}
+
+/* Animated background */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+/* Glass Login Card */
+
+.login-card{
+
+width:370px;
+
+padding:40px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+
+color:white;
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.login-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* Logo */
+
+.logo{
+
+font-size:28px;
+
+margin-bottom:5px;
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+font-size:14px;
+
+margin-bottom:25px;
+
+opacity:0.8;
+
+}
+
+/* Form */
+
+form{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/* Labels */
+
+label{
+
+text-align:left;
+
+margin-top:12px;
+
+font-size:14px;
+
+}
+
+/* Inputs */
+
+input{
+
+padding:11px;
+
+margin-top:5px;
+
+border:none;
+
+border-radius:6px;
+
+outline:none;
+
+}
+
+/* Password container */
+
+.password-box{
+
+position:relative;
+
+}
+
+/* Eye icon */
+
+.eye-icon{
+
+position:absolute;
+
+right:10px;
+
+top:12px;
+
+cursor:pointer;
+
+color:black;
+
+}
+
+/* Login button */
+
+.login-btn{
+
+margin-top:22px;
+
+padding:12px;
+
+border:none;
+
+background:#00d4ff;
+
+color:black;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.login-btn:hover{
+
+background:#00a6cc;
+
+transform:scale(1.05);
+
+}
+
+/* Links */
+
+.links{
+
+margin-top:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+}
+
+.link{
+
+cursor:pointer;
+
+color:#00d4ff;
+
+}
+
+.link:hover{
+
+text-decoration:underline;
+
+}

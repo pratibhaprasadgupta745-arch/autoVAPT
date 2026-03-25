@@ -1,0 +1,184 @@
+.scan-page{
+color:white;
+}
+
+.scan-title{
+font-size:28px;
+margin-bottom:25px;
+}
+
+/* scan form */
+
+.scan-card{
+background:#020617;
+padding:25px;
+border-radius:10px;
+width:420px;
+display:flex;
+flex-direction:column;
+gap:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.scan-card input,
+.scan-card select{
+padding:10px;
+border-radius:6px;
+border:1px solid #1e293b;
+background:#0f172a;
+color:white;
+outline:none;
+}
+
+.scan-card input:focus,
+.scan-card select:focus{
+border-color:#2563eb;
+}
+
+/* button */
+
+.scan-btn{
+margin-top:10px;
+background:#2563eb;
+border:none;
+padding:10px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.scan-btn:hover{
+background:#1d4ed8;
+transform:scale(1.02);
+}
+
+/* 🔥 STATUS BADGE */
+
+.status-badge{
+margin-top:10px;
+padding:8px 14px;
+border-radius:6px;
+font-weight:bold;
+display:inline-block;
+font-size:14px;
+}
+
+.status-idle{
+background:#475569;
+color:white;
+}
+
+.status-queued{
+background:#f59e0b;
+color:black;
+}
+
+.status-running{
+background:#2563eb;
+color:white;
+}
+
+.status-completed{
+background:#22c55e;
+color:white;
+}
+
+.status-failed{
+background:#ef4444;
+color:white;
+}
+
+/* progress */
+
+.progress-section{
+margin-top:25px;
+background:#020617;
+padding:20px;
+border-radius:10px;
+}
+
+.progress-bar{
+height:12px;
+background:#1e293b;
+border-radius:10px;
+margin:10px 0;
+}
+
+.progress-fill{
+height:100%;
+background:#2563eb;
+border-radius:10px;
+transition:width 0.3s;
+}
+
+/* results */
+
+.result-section{
+margin-top:25px;
+background:#020617;
+padding:25px;
+border-radius:10px;
+}
+
+.result-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:10px;
+}
+
+.result{
+text-align:center;
+padding:15px;
+border-radius:8px;
+background:#0f172a;
+transition:0.2s;
+}
+
+.result:hover{
+transform:translateY(-3px);
+}
+
+.result.critical{border-left:4px solid #ef4444;}
+.result.high{border-left:4px solid #f97316;}
+.result.medium{border-left:4px solid #eab308;}
+.result.low{border-left:4px solid #22c55e;}
+
+/* buttons */
+
+.scan-actions{
+margin-top:20px;
+display:flex;
+gap:10px;
+}
+
+.view-btn{
+background:#22c55e;
+padding:10px 15px;
+border:none;
+border-radius:6px;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.view-btn:hover{
+background:#16a34a;
+transform:scale(1.05);
+}
+
+.new-btn{
+background:#334155;
+padding:10px 15px;
+border:none;
+border-radius:6px;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.new-btn:hover{
+background:#1e293b;
+transform:scale(1.05); 
+}

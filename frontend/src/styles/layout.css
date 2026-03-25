@@ -1,0 +1,24 @@
+.layout{
+  display:flex;
+  height:100vh;
+  background:#0f172a;
+  overflow:hidden;
+}
+
+/* sidebar space */
+.sidebar{
+  flex-shrink:0;
+}
+
+/* dashboard */
+.main-content{
+  flex:1;
+  padding:30px;
+  overflow-y:auto;
+  transition:all 0.3s ease;
+}
+
+/* remove body margin */
+body{
+  margin:0;
+}
