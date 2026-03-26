@@ -62,7 +62,9 @@ class Scan(Base):
     id = Column(Integer, primary_key=True, index=True)
 
     target = Column(String(255), nullable=False, index=True)
-    scan_type = Column(String(50), nullable=False, index=True)
+
+    # ✅ FIX: default value added
+    scan_type = Column(String(50), nullable=False, default="full", index=True)
 
     status = Column(String(50), default="Pending", index=True)
 
@@ -71,7 +73,6 @@ class Scan(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
 
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), index=True)
-
     asset_id = Column(Integer, ForeignKey("assets.id", ondelete="SET NULL"), nullable=True)
 
     # progress tracking
@@ -92,18 +93,8 @@ class Scan(Base):
     # relationships
     user = relationship("User", back_populates="scans")
     asset = relationship("Asset", back_populates="scans")
-
-    vulnerabilities = relationship(
-        "Vulnerability",
-        back_populates="scan",
-        cascade="all, delete"
-    )
-
-    logs = relationship(
-        "ScanLog",
-        back_populates="scan",
-        cascade="all, delete"
-    )
+    vulnerabilities = relationship("Vulnerability", back_populates="scan", cascade="all, delete")
+    logs = relationship("ScanLog", back_populates="scan", cascade="all, delete")
 
 
 # ------------------ VULNERABILITIES ------------------
@@ -184,4 +175,4 @@ class AuditLog(Base):
     action = Column(String(255))
     target = Column(String(255))
 
-    timestamp = Column(DateTime, server_default=func.now()) 
+    timestamp = Column(DateTime, server_default=func.now())
